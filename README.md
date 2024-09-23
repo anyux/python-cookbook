@@ -1,2 +1,2 @@
 # python-cookbook
-python cookbook 书箱学习记录
+python cookbook 书籍学习记录
