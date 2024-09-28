@@ -1,0 +1,751 @@
+    1  c;leae
+    2  clear
+    3  df -
+    4  df -h
+    5  cat /etc/fstab 
+    6  ip addr
+    7  df -h
+    8  vim /etc/apt/sources.list
+    9  CLEAR
+   10  clear
+   11  df -h
+   12  snap remove lxd
+   13  df -h
+   14  snap remove core18
+   15  df -h
+   16  snap remove snapd
+   17  df -h
+   18  poweroff
+   19  sudo apt update
+   20  # software-properties-common 它是管理和配置apt的工具,可以用add-apt-repository添加新的仓库
+   21  sudo apt install -y software-properties-common
+   22  python3 --version
+   23  sudo apt update
+   24  sudo apt install -y python3.10 python3.10-venv python3.10-dev python3.10-distutils
+   25  sudo add-apt-repository ppa:deadsnakes/ppa
+   26  sudo apt install -y python3.10 python3.10-venv python3.10-dev python3.10-distutils
+   27  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+   28  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
+   29  sudo update-alternatives --set python3 /usr/bin/python3.10
+   30  curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+   31  python3.10 -m pip install --upgrade pip
+   32  python3 --version
+   33  pip3 install ansible==10.3.0
+   34  ansible --version 
+   35  pip3 list | grep libyaml
+   36  pip3 list | grep -i libyaml
+   37  pip3 list | grep -i yaml
+   38  apt remove -y python3-yaml
+   39  pip3 install pyyaml
+   40  python3 -c "import yaml; print(yaml.__file__)"
+   41  python3 -c "import yaml; print(yaml.__with_libyaml__)"
+   42  ansible --version
+   43  pip3 install ipython3
+   44  pip3 install ipython
+   45  ipython3
+   46  w
+   47  ll
+   48  ls
+   49  ll
+   50  cd .ssh/
+   51  ls
+   52  ll
+   53  chmod -R 6000 ./
+   54  ll
+   55  chmod -R 600 ./
+   56  ll
+   57  cd /etc/ssh/
+   58  ls
+   59  vim sshd_config
+   60  systemctl daemon-reload 
+   61  systemctl restart sshd.service 
+   62  vim sshd_config
+   63  systemctl daemon-reload 
+   64  systemctl restart sshd.service 
+   65  ls
+   66  w
+   67  apt install iftop
+   68  iftop
+   69  vim /etc/hosts
+   70  iftop
+   71  w
+   72  cat /etc/hosts
+   73  ps -ef | grep Op
+   74  ps -ef | grep op
+   75  iftop
+   76  ansible --version 
+   77  cat /etc/ansible/ansible.cfg 
+   78  vim /etc/ansible/ansible.cfg 
+   79  ansible --version 
+   80  ansible-playbook playbook.yaml 
+   81  vim /etc/ansible/ansible.cfg 
+   82  ansible-playbook playbook.yaml 
+   83  ls /usr/share/ansible/plugins/filter/
+   84  vim /etc/ansible/ansible.cfg 
+   85  mkdir -p /usr/share/ansible/plugins/callback
+   86  touch /usr/share/ansible/plugins/callback/my_callback.py
+   87  vim /usr/share/ansible/plugins/callback/my_callback.py
+   88  ansible all -m ping 
+   89  ansible-playbook playbook.yaml 
+   90  vim /etc/ansible/ansible.cfg 
+   91  ansible-playbook playbook.yaml 
+   92  ansible all -m ping 
+   93  vim /etc/ansible/ansible.cfg 
+   94  ls /usr/share/ansible/plugins/callback
+   95  cat /usr/share/ansible/plugins/callback/my_callback.py 
+   96  ll /usr/share/ansible/plugins/callback/my_callback.py
+   97  ANSIBLE_DEBUG=True ansible-playbook playbook.yaml
+   98  ansible all -m ping 
+   99  ansible-playbook playbook.yaml 
+  100  cat /usr/share/ansible/plugins/callback/my_callback.py
+  101  ansible-playbook playbook.yaml 
+  102  cat /usr/share/ansible/plugins/callback/my_callback.py
+  103  vim /usr/share/ansible/plugins/callback/my_callback.py
+  104  ansible-playbook playbook.yaml 
+  105  vim /etc/ansible/ansible.cfg 
+  106  ansible-playbook playbook.yaml 
+  107  vim /etc/ansible/ansible.cfg 
+  108  ansible-playbook playbook.yaml 
+  109  ansible-doc -t callback -l
+  110  ansible-doc -t callback -l | grep my
+  111  ansible-doc info my_callback
+  112  ansible-doc show my_callback
+  113  ansible-doc --help
+  114  ansible-doc  my_callback
+  115  ansible-playbook playbook.yaml 
+  116  ansible --version 
+  117  pip3 list | grep ansible
+  118  vim /etc/ansible/ansible.cfg 
+  119  ansible-playbook playbook.yaml 
+  120  vim /etc/ansible/ansible.cfg 
+  121  ansible-playbook playbook.yaml 
+  122  vim /etc/ansible/ansible.cfg 
+  123  ansible-playbook playbook.yaml 
+  124  ansible --version 
+  125  mkdir /etc/ansible/
+  126  vim ansible_setup.yaml
+  127  mkdir /usr/share/ansible/plugins/filter -p
+  128  ansible-playbook ansible_setup.yaml 
+  129  ansible --version
+  130  vim /etc/ansible/ansible.cfg 
+  131  vim /etc/ansible/hosts 
+  132  ansible --version 
+  133  vim /usr/share/ansible/plugins/filter/my_custom_filters.py
+  134  ls
+  135  vim playbook.yaml
+  136  ansible-playbook playbook.yaml
+  137  cat /etc/ansible/ansible.cfg 
+  138  vim /usr/share/ansible/plugins/filter/my_custom_filters.py
+  139  ansible-playbook playbook.yaml
+  140  vim /etc/ansible/hosts 
+  141  ansible-playbook playbook.yaml
+  142  cat playbook.yaml 
+  143  cd .ssh/
+  144  ll
+  145  cd ..
+  146  chmod 700 .ssh/
+  147  cd snap/
+  148  ls
+  149  cd ../.ssh/
+  150  ls
+  151  ll
+  152  cat authorized_keys 
+  153  ll
+  154  cat 107.pub 
+  155  cat 107
+  156  ls
+  157  cat 107.pub > authorized_keys 
+  158  ls
+  159  ansible-galaxy search lnmap
+  160  ll
+  161  mkdir test-role
+  162  cd test-role
+  163  ansible-galaxy init nginx
+  164  ls
+  165  cd nginx/
+  166  ls
+  167  pwd
+  168  cd ..
+  169  ls -lrtR nginx/
+  170  apt install tree
+  171  tree ./
+  172  vim test_nginx.yaml
+  173  ls
+  174  cd nginx/files/
+  175  ls
+  176  tar xf nginx-1.20.1.tar.gz 
+  177  ls
+  178  cd nginx-1.20.1/
+  179  ls
+  180  tree ./
+  181  ls
+  182  cd auto/
+  183  ls
+  184  cd ..
+  185  ls
+  186  cd ..
+  187  ls
+  188  rm -rf nginx-1.20.1*
+  189  tar xf nginx-release-1.20.0.tar.gz 
+  190  ls
+  191  cd nginx-release-1.20.0/
+  192  ls
+  193  cd auto/
+  194  ls
+  195  cd ../..
+  196  ll
+  197  ls -lha
+  198  cd
+  199  ls
+  200  cat playbook.yaml 
+  201  cat playbook.yaml -nA 
+  202  wget http://nginx.org/download/nginx-1.20.2.tar.gz
+  203  tar -zxvf nginx-1.20.2.tar.gz
+  204  cd nginx-1.20.2
+  205  apt install -y gcc
+  206  gcc
+  207  ls
+  208  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ld-opt='-static'
+  209  echo $?
+  210  apt search pcre
+  211  apt search libpcre
+  212  apt install libpcre
+  213  apt install libpcre3
+  214  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ld-opt='-static'
+  215  apt install pcre pcre-dev
+  216  apt-get install libpcre3 libpcre3-dev
+  217  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ld-opt='-static'
+  218  apt update
+  219  sudo update-alternatives --set python3 /usr/bin/python3.8
+  220  apt update
+  221  apt-get install libpcre3 libpcre3-dev
+  222  find / -name "pcre*"
+  223  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ld-opt='-static'
+  224  sudo apt-get update
+  225  sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev zlib1g zlib1g-dev
+  226  sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev zlib1g zlib1g-dev -y 
+  227  ./configure     --sbin-path=/usr/local/nginx/nginx     --conf-path=/usr/local/nginx/nginx.conf     --pid-path=/usr/local/nginx/nginx.pid     --with-http_ssl_module     --with-pcre     --with-zlib=/usr/include     --with-http_gzip_static_module     --with-ld-opt='-static'
+  228  echo $?
+  229  make
+  230  echo $?
+  231  sudo apt-get update
+  232  sudo apt-get install zlib1g-dev
+  233  ./configure     --sbin-path=/usr/local/nginx/nginx     --conf-path=/usr/local/nginx/nginx.conf     --pid-path=/usr/local/nginx/nginx.pid     --with-http_ssl_module     --with-pcre     --with-http_gzip_static_module     --with-ld-opt='-static'
+  234  make\
+  235  make
+  236  echo $?
+  237  ls
+  238  tar zcvf nginx.tar.gz -C /usr/local/nginx
+  239  ls
+  240  tree ./
+  241  tree ./|less
+  242  cd objs/
+  243  ls
+  244  cd ..
+  245  ls
+  246  tar -czvf nginx-build.tar.gz objs/ conf/ html/ logs/
+  247  ls
+  248  mkdir logs
+  249  tar -czvf nginx-build.tar.gz objs/ conf/ html/ logs/
+  250  python3 -m http.server
+  251  ls
+  252  make install
+  253  cd /usr/local/nginx/
+  254  ls
+  255  ll
+  256  ls
+  257  rm -rf * 
+  258  cd -
+  259  ls
+  260  ./configure     --prefix=/usr/local/nginx     --with-http_ssl_module     --with-pcre     --with-http_gzip_static_module     --with-ld-opt='-static'
+  261  make clean
+  262  # 或者
+  263  make distclean
+  264  ls
+  265  cd ..
+  266  ls
+  267  rm -rf nginx-1.20.2
+  268  tar xf nginx-1.20.2.tar.gz 
+  269  cd nginx-1.20.2/
+  270  ls
+  271  s
+  272  ls
+  273  ./configure     --prefix=/usr/local/nginx     --with-http_ssl_module     --with-pcre     --with-http_gzip_static_module     --with-ld-opt='-static'
+  274  make
+  275  echo $?
+  276  ls
+  277  make install
+  278  cd /usr/local/
+  279  ls
+  280  cd nginx/
+  281  ls
+  282  cd ..
+  283  ls
+  284  tar zcvf nginx-build.tar.gz /usr/local/nginx
+  285  python3 -m http.sever
+  286  python3 -m http.server
+  287  history | grep apt
+  288  ls
+  289  cd /usr/local/nginx/
+  290  ls -lrt sbin/
+  291  apt install -y nginx
+  292  systemctl status nginx
+  293  cat /lib/systemd/system/nginx.service
+  294  ls /sbin/start-stop-daemon 
+  295  systemctl stop nginx 
+  296  systemctl status nginx
+  297  systemctl status nginx.service 
+  298  cat /lib/systemd/system/nginx.service
+  299  systemctl status nginx.service 
+  300  cat /lib/systemd/system/nginx.service
+  301  ll /run/nginx.pid
+  302  systemctl start nginx
+  303  ll /run/nginx.pid
+  304  cat /run/nginx.pid
+  305  systemctl stop nginx
+  306  systemctl status nginx
+  307  cat /lib/systemd/system/nginx.service
+  308  systemctl status nginx
+  309  ls /lib/systemd/system/nginx.service 
+  310  ls /lib/systemd/system/
+  311  ls /lib/systemd/system/ | grep nginx 
+  312  ls -lrt /lib/systemd/system/nginx.service 
+  313  systemctl status nginx 
+  314  nginx -t
+  315  cat /etc/nginx/nginx.conf 
+  316  head /etc/nginx/nginx.conf
+  317  systemctl status nginx 
+  318  which nginx 
+  319  nginx -t 
+  320  nginx 
+  321  systemctl status nginx 
+  322  ps -ef | grep nginx 
+  323  systemctl status nginx 
+  324  cat /lib/systemd/system/nginx.service 
+  325  systemctl status nginx 
+  326  systemctl start nginx 
+  327  systemctl status nginx 
+  328  systemctl start nginx 
+  329  nginx -s stop 
+  330  ps -ef | grep nginx 
+  331  pkill nginx 
+  332  ps -ef | grep nginx 
+  333  systemctl start nginx 
+  334  systemctl status nginx 
+  335  cat /lib/systemd/system/nginx.service 
+  336  ls
+  337  nginx -T
+  338  nginx --help
+  339  nginx -h
+  340  nginx -V
+  341  ls
+  342  cd nginx-1.20.2/
+  343  ls
+  344  make clean
+  345  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-http_xslt_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  346  apt install libxml2 libxml2-dev libxslt-devel
+  347  apt install libxml2 libxml2-dev libxslt-dev
+  348  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-http_xslt_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  349  apt-get install libxml2 libxml2-dev libxslt-dev
+  350  ./configure: error: the HTTP XSLT module requires the libxml2/libxslt librar
+  351  sudo apt-get install libxslt-dev
+  352  sudo apt-get install libgd-dev
+  353  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-http_xslt_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  354  sudo apt-get install libgeoip-dev -y
+  355  cd nginx-1.20.2/
+  356  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-http_xslt_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  357  apt search libxml2
+  358  apt search libxml2 |less
+  359  ap install libxm2
+  360  apt install libxm2
+  361  apt search libxml2 |less
+  362  apt install libxml++2.6-dev
+  363  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-http_xslt_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  364  cd "nginx-1.20.2"
+  365  apt search libxslt
+  366  apt search libxslt |less
+  367  apt install libxslt1-dev -y
+  368  sudo apt-get install libxml2-dev libxslt1-dev
+  369  pkg-config --libs libxml-2.0
+  370  pkg-config --libs libxslt
+  371  pkg-config --libs libxml-2.0
+  372  sudo apt-get update
+  373  locate libxml2.so
+  374  locate libxslt.so
+  375  apt install mlocate
+  376  locate libxslt.so
+  377  pkg-config --libs libxml-2.0
+  378  pkg-config --libs libxslt
+  379  locate libxslt.so
+  380  sudo apt-get install libxml2-dev libxslt1-dev
+  381  cd nginx-1.20.2/
+  382  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module --with-http_sub_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  383  ./configure --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-65A62v/nginx-1.20.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-static -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_sub_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  384  make
+  385  echo $?
+  386  make install
+  387  echo $?
+  388  ls /usr/local/nginx/sbin/nginx
+  389  mkdir -p /tmp/nginx_package
+  390  cp -r /usr/local/nginx /tmp/nginx_package/usr/local/
+  391  cp -r /etc/nginx /tmp/nginx_package/etc/
+  392  cp -r /var/log/nginx /tmp/nginx_package/var/log/
+  393  cp -r /usr/lib/nginx/modules /tmp/nginx_package/usr/lib/nginx/
+  394  cp -r /var/lib/nginx /tmp/nginx_package/var/lib/
+  395  ls
+  396  cd /tmp/nginx_package/
+  397  ls
+  398  ls etc/
+  399  ls
+  400  rm -rf * 
+  401  ls
+  402  mkdir -p /tmp/nginx_package
+  403  cp -r /usr/local/nginx /tmp/nginx_package/
+  404  cp -r /etc/nginx /tmp/nginx_package/
+  405  cp -r /var/log/nginx /tmp/nginx_package/
+  406  cp -r /usr/lib/nginx/modules /tmp/nginx_package/
+  407  cp -r /var/lib/nginx /tmp/nginx_package/
+  408  ls
+  409  rm -rf * 
+  410  mkdir -p /tmp/nginx_package
+  411  mkdir -p /tmp/nginx_package/usr/local/
+  412  mkdir -p /tmp/nginx_package/etc/
+  413  mkdir -p /tmp/nginx_package/var/log/
+  414  mkdir -p /tmp/nginx_package/usr/lib/nginx/
+  415  mkdir -p /tmp/nginx_package/var/lib/
+  416  cp -r /usr/local/nginx /tmp/nginx_package/usr/local/
+  417  cp -r /etc/nginx /tmp/nginx_package/etc/
+  418  cp -r /var/log/nginx /tmp/nginx_package/var/log/
+  419  cp -r /usr/lib/nginx/modules /tmp/nginx_package/usr/lib/nginx/
+  420  cp -r /var/lib/nginx /tmp/nginx_package/var/lib/
+  421  ll
+  422  tree ./
+  423  ll
+  424  cd /tmp
+  425  tar -czvf nginx_full_package.tar.gz nginx_package
+  426  ll
+  427  ls -lh
+  428  ls
+  429  cd nginx_package/
+  430  ls
+  431  rm -rf * 
+  432  cd /usr/local/nginx/
+  433  ls
+  434  rm -rf * 
+  435  cd /root/nginx-1.20.2/
+  436  ls
+  437  make install
+  438  cd /tmp/
+  439  ls
+  440  cd nginx_package/
+  441  ls
+  442  mkdir -p /tmp/nginx_package
+  443  mkdir -p /tmp/nginx_package/usr/local/
+  444  mkdir -p /tmp/nginx_package/etc/
+  445  mkdir -p /tmp/nginx_package/var/log/
+  446  mkdir -p /tmp/nginx_package/usr/lib/nginx/
+  447  mkdir -p /tmp/nginx_package/var/lib/
+  448  cp -r /usr/local/nginx /tmp/nginx_package/usr/local/
+  449  cp -r /etc/nginx /tmp/nginx_package/etc/
+  450  cp -r /var/log/nginx /tmp/nginx_package/var/log/
+  451  cp -r /usr/lib/nginx/modules /tmp/nginx_package/usr/lib/nginx/
+  452  cp -r /var/lib/nginx /tmp/nginx_package/var/lib/
+  453  cd ..
+  454  cd /tmp
+  455  tar -czvf nginx_full_package.tar.gz nginx_package
+  456  ll
+  457  ls -lha
+  458  ls -lha /usr/local/nginx/sbin/nginx 
+  459  ls
+  460  cat /etc/apt/sources.list
+  461  ls
+  462  cd nginx_package/
+  463  ls
+  464  tar -czvf nginx_full_package.tar.gz ./
+  465  ls
+  466  apt install nginx 
+  467  apt search nginx 
+  468  apt search nginx  |less
+  469  cd 
+  470  cd nginx-1.20.2/
+  471  make clean 
+  472  ./configure --prefix=/usr/local/nginx --pid-path=/run/nginx.pid --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_sub_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+  473  make
+  474  make install
+  475  cd /usr/local/nginx/
+  476  ls
+  477  history | grep tar
+  478  cd ..
+  479  ls
+  480  tar zcvf nginx-binary-1.20.tar.gz -C /usr/local/nginx
+  481  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  482  ls
+  483  ll -lha
+  484  ls
+  485  rm -rf nginx*
+  486  cd /root/nginx-1.20.2/
+  487  make clean 
+  488  ./configure --prefix=/usr/local/nginx --pid-path=/run/nginx.pid --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_sub_module --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module --with-ld-opt='-static'
+  489  make
+  490  make install
+  491  ls
+  492  cd /usr/local/
+  493  ls
+  494  cd nginx/
+  495  ls
+  496  cd ..
+  497  history | grep tar
+  498  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  499  ls
+  500  ./nginx/sbin/nginx -V
+  501  ./nginx/sbin/nginx -c ./nginx/conf/nginx.conf
+  502  /usr/local/nginx/sbin/nginx -c ./nginx/conf/nginx.conf
+  503  /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+  504  ps -ef | grep 80
+  505  ps -ef | grep nginx
+  506  kill 66406
+  507  ps -ef | grep nginx
+  508  /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+  509  ps -ef | grep nginx
+  510  kill -9 96759
+  511  ps -ef | grep nginx
+  512  kill -9 96760
+  513  ps -ef | grep nginx
+  514  uname -a 
+  515  history | grep confi
+  516  cd /root/nginx-1.20.2/
+  517  ls
+  518  cd ..
+  519  ls
+  520  rm -rf nginx-1.20.2
+  521  tar xf nginx-1.20.2.tar.gz 
+  522  cd nginx-1.20.2/
+  523  ls 
+  524  ./configure--prefix=/usr/local/nginx --with-http_ssl_module--with-pcre--with-http_gzip_static_module--with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-ld-opt='-static'
+  525  ./configure --prefix=/usr/local/nginx --with-http_ssl_module--with-pcre--with-http_gzip_static_module--with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-ld-opt='-static'
+  526  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-ld-opt='-static'
+  527  make
+  528  rm -rf /usr/local/nginx
+  529  make install
+  530  cd /usr/local/
+  531  ls
+  532  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  533  md5sum nginx/sbin/nginx 
+  534  ./nginx/sbin/nginx 
+  535  ls
+  536  cd 
+  537  cd nginx-1.20.2/
+  538  ls
+  539  make clean
+  540  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-ld-opt='-static'
+  541  make
+  542  make install
+  543  cd /usr/local/
+  544  ls
+  545  rm -rf nginx-binary-1.20.tar.gz 
+  546  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  547  rm -rf nginx
+  548  cd ..
+  549  cd /root/nginx-1.20.2/
+  550  cd ..
+  551  ls
+  552  rm -rf nginx-1.20.2
+  553  tar xf nginx-1.20.2.tar.gz 
+  554  cd nginx-1.20.2/
+  555  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-pcre-jit --with-ld-opt='-static'
+  556  make
+  557  make install
+  558  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  559  history | cofnig
+  560  history | grep config
+  561  ls
+  562  make clean
+  563  rm -rf /usr/local/nginx
+  564  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ld-opt='-static'
+  565  make
+  566  make install
+  567  ls
+  568  rm -rf nginx-binary-1.20.tar.gz 
+  569  tar zcvf nginx-binary-1.20.tar.gz  /usr/local/nginx
+  570  /usr/local/nginx/sbin/nginx -V
+  571  pwd
+  572  cd /usr/local/nginx/sbin/
+  573  ls
+  574  ./nginx 
+  575  ls
+  576  vim /lib/systemd/system/nginx.service
+  577  apt remove -y nginx 
+  578  vim /lib/systemd/system/nginx.service
+  579  systemctl daemon-reload 
+  580  systemctl start nginx
+  581  systemctl status nginx
+  582  ss -lnatp | grep nginx 
+  583  kill -9 511
+  584  kill -9 99760
+  585  ss -lnatp | grep nginx 
+  586  pkill nginx 
+  587  ss -lnatp | grep nginx 
+  588  ps -ef | grep nginx 
+  589  kill -9 99759
+  590  ps -ef | grep nginx 
+  591  systemctl daemon-reload 
+  592  systemctl start nginx
+  593  systemctl status nginx
+  594  strace systemctl stop nginx
+  595  systemctl daemon-reload 
+  596  systemctl start nginx
+  597  systemctl status nginx
+  598  systemctl stop nginx
+  599  apt install -y docker.io
+  600  vim Dockerfile
+  601  docker build -t test .
+  602  docker login --username=1915530614@qq.com registry.cn-hangzhou.aliyuncs.com -p ul9cjtLBQl0JXRzzoCKi
+  603  ls
+  604  cat Dockerfile 
+  605  docker pull busybox
+  606  docker tag docker.io/library/busybox:latest registry.cn-hangzhou.aliyuncs.com/k8s-a/ingress-nginx:v1.3.0
+  607  docker push registry.cn-hangzhou.aliyuncs.com/k8s-a/ingress-nginx:v1.3.0
+  608  pip3 install docker-py
+  609  ansible --version 
+  610  ansible-doc -l
+  611  ansible-galaxy collection install community.docker
+  612  ansible-galaxy --list
+  613  ansible-galaxy list
+  614  ansible-galaxy collection list
+  615  ansible-doc -l | grep docker
+  616  ansible-galaxy collection list 
+  617  ansible-galaxy collection list  | grep docker
+  618  ansible-galaxy collection --help
+  619  ansible-galaxy collection list
+  620  cd /usr/local/lib/python3.10/dist-packages/ansible_collections
+  621  ls
+  622  cd community/
+  623  ls
+  624  cd ..
+  625  du -sh * 
+  626  tar zxcvf /root/a.tar.gz community
+  627  tar zcvf /root/a.tar.gz community
+  628  cd
+  629  ls
+  630  cd -
+  631  ls
+  632  pwd
+  633  ls
+  634  cd community/
+  635  ls
+  636  cd docker/
+  637  ls
+  638  cat playbook.yaml 
+  639  ls
+  640  tar tf a.tar.gz 
+  641  ansible --version 
+  642  ls /usr/share/ansible/plugins/modules
+  643  ls /root/.ansible/plugins/modules
+  644  vim /etc/ansible/ansible.cfg 
+  645  ls /usr/share/ansible/collections
+  646  ls /usr/share/ansible
+  647  ls /usr/share/ansible/plugins/
+  648  ls /usr/share/ansible/plugins/callback/my_callback.py 
+  649  cat /usr/share/ansible/plugins/callback/my_callback.py
+  650  ls
+  651  ansible --version 
+  652  ls /usr/local/lib/python3.10/dist-packages/
+  653  ansible --version 
+  654  ls /usr/local/lib/python3.10/dist-packages/ansible/
+  655  ansible --version 
+  656  ls /usr/local/lib/python3.10/dist-packages/ansible
+  657  ls /usr/local/lib/python3.10/dist-packages/ansible/pl
+  658  ls /usr/local/lib/python3.10/dist-packages/ansible/plugins/
+  659  ansible --version 
+  660  cat /etc/ansible/ansible.cfg 
+  661  ls /usr/share/ansible
+  662  ls /usr/share/ansible/plugins/
+  663  ls /usr/share/ansible/collections
+  664  ls /usr/share/ansible/
+  665  ls /root/.ansible/collections
+  666  ls /root/.ansible/collections/ansible_collections/
+  667  ls /usr/local/bin/ansible
+  668  ls -l /usr/local/bin/ansible
+  669  vim /usr/local/bin/ansible
+  670  cat /usr/local/bin/ansible
+  671  cat /usr/local/bin/ansible-playbook 
+  672  ansible-playbook --version
+  673  ls /usr/share/ansible/plugins/modules/
+  674  ls /root/.ansible/collections/ansible_collections/
+  675  ls /root/.ansible/collection
+  676  ls /root/.ansible/collections
+  677  ls /root/.ansible/collections/ansible_collections/
+  678  ansible --version 
+  679  cat /etc/ansible/ansible.cfg 
+  680  ls /usr/share/ansible/plugins/
+  681  ls /usr/local/lib/python3.10/dist-packages/ansible/modules
+  682  cd /usr/local/lib/python3.10/dist-packages/ansible/modules
+  683  ls
+  684  cd /usr/local/lib/python3.10/dist-packages/ansible/module_utils/
+  685  ls
+  686  cd
+  687  ls ~/.ansible/plugins/modules/
+  688  ansible --version 
+  689  mkdir -p /root/.ansible/plugins/modules
+  690  cd /root/.ansible/plugins/modules
+  691  ls
+  692  vim my_module.py
+  693  cd
+  694  ansible all -m my_module -a "name=Ansible"
+  695  cat /root/.ansible/plugins/modules/my_module.py 
+  696  ansible-doc -M /root/.ansible/plugins/modules/ my_dule
+  697  ansible-doc -M /root/.ansible/plugins/modules/ my_module
+  698  ansible-doc -M /root/.ansible/plugins/modules/my_module.py 
+  699  ansible-doc -M /root/.ansible/plugins/modules/
+  700  ls /root/.ansible/plugins/modules/my_module.py 
+  701  cat /root/.ansible/plugins/modules/my_module.py
+  702  ansible-doc -M /root/.ansible/plugins/modules/ my_module
+  703  vim /root/.ansible/plugins/modules/my_module.py
+  704  ansible-doc -M /root/.ansible/plugins/modules/ my_module
+  705  ansible all -m my_module -a "name=Ansible"
+  706  cat .bashrc 
+  707  cat .profile 
+  708  w
+  709  yum repo lsit 
+  710  yum repo list
+  711  w
+  712  uname -a 
+  713  pyenv
+  714  ipython
+  715  ls
+  716  mkdir test
+  717  cd test
+  718  ls
+  719  rz -E
+  720  **000000
+  721  apt install lrzsz
+  722  rz -E
+  723  ll
+  724  python3 -m http.server 
+  725  python3 -m http.server 80
+  726  ss -lnatp 
+  727  systemctl status nginx
+  728  cd /etc/nginx/
+  729  ls
+  730  vim nginx.conf
+  731  vim conf.d/
+  732  vim nginx.conf
+  733  vim sites-enabled/default 
+  734  cd /var/www/html/
+  735  ls
+  736  ls /root/
+  737  ls
+  738  rz -E
+  739  ls
+  740  ll
+  741  vim index.html 
+  742  rm -rf index.
+  743  rm -rf index.html 
+  744  rz -E
+  745  w
+  746  lsblk
+  747  df --h
+  748  df -h
+  749  ls
+  750  history 
+  751  history > input.txt
